@@ -113,7 +113,7 @@ netflix-sql-analysis/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/YOUR-USERNAME/netflix-sql-analysis.git
+   git clone https://github.com/waghshravani/netflix-sql-analysis.git
    ```
 2. Open `sql/01_database_setup.sql` and **update the three file paths** in the `LOAD DATA LOCAL INFILE` statements so they point to the CSV files in the `data/` folder.
 3. Run the scripts in order:
@@ -176,13 +176,16 @@ netflix-sql-analysis/
 
 ## Key Insights
 
-> _Add your findings here after running the queries. Two to four lines per question, with numbers. Example format:_
->
-> - **Movies vs TV Shows:** _Movies make up X% of the catalogue and TV Shows Y%._
-> - **Profitability:** _[Movies / TV Shows] earn higher average profit (X million USD vs Y million USD)._
-> - **Budget vs profit:** _[Describe whether high-budget titles earned more profit than low-budget ones.]_
-> - **Top genres by views:** _[Genre 1, Genre 2, Genre 3]._
-> - **Engagement:** _[Country] shows the highest average watch time at X minutes._
+Findings from the analysis of 8,807 titles. Profit is calculated as estimated revenue minus production and marketing cost.
+
+- **Content mix:** Movies make up about 70% of the catalogue (6,131 titles) and TV Shows about 30% (2,676).
+- **Top producing countries:** The United States leads with 2,818 titles, followed by India (972), the United Kingdom (419) and Japan (245). The US has nearly 3x India's volume.
+- **Genres by volume:** The catalogue spans 42 genre categories. International Movies (2,752), Dramas (2,427) and Comedies (1,674) are the largest. A title can carry several genres, so these counts overlap.
+- **Genres by views:** Dramas drive the most views (244,245 million), ahead of International Movies (190,483 million) and Comedies (171,172 million). Dramas lead even though International Movies has more titles.
+- **Profitability by type:** Movies and TV Shows earn almost the same average profit: TV Shows 130.15 million USD vs Movies 128.04 million USD, a gap of about 1.6%.
+- **Budget vs profit:** A bigger budget did not mean a bigger profit. Average profit was 129.92 million USD for low-budget titles, 129.77 million for high-budget and 126.37 million for medium-budget titles, all within about 3% of each other.
+
+**Takeaway:** In this dataset, profit varies very little by content type or budget size, so spending more did not translate into higher returns, while views differ widely by genre.
 
 ## Data Quality Notes
 
@@ -193,10 +196,11 @@ netflix-sql-analysis/
 
 ## Author
 
-**Ayush Varma**
+**Shravani Wagh**
+
 Aspiring Data Analyst | SQL · Power BI · Python · Excel
 
-- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/your-profile)
-- Email: your-email@example.com
+- LinkedIn: https://www.linkedin.com/in/shravani-wagh-7230342a3/
+- Email: shravaniw.02@gmail.com
 
 If you found this project useful, consider giving it a star.
